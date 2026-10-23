@@ -1,0 +1,19 @@
+::kind(vocabulary)
+::vocabulary(ui){
+  version: "1.0.0"
+}
+
+::elements{
+  details: {
+    display: block
+    singleton: false
+    args: {
+      id: {
+        type: string
+        positional: true
+        about: | The rule's identifier. The heading is prose and may be reworded; this
+               | identifier is the name a tool is held to.
+      }
+    }
+  }
+}

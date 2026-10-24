@@ -32,7 +32,7 @@ A file that has been pushed is never edited, not even to fix a typo: a fix is a 
 
 ## Taking a vocabulary
 
-Declare where the file comes from in the repository's `catasto.motm`, then run `catasto sync`:
+Declare where the file comes from in the repository's `catasto.ctmt`, then run `catasto sync`:
 
 ```text
 "tmtroot/schema/vocabularies/writ@1.0.0.vocabulary.tmt": {

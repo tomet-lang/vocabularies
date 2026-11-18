@@ -1,15 +1,13 @@
-::config(
-  export: {
-    type: commonmark,
-    path: "README.md"
-  }
+::id(doc-readme)
+::export(
+  type: commonmark
+  path: "README.md"
 )
-::meta{
-  id: doc-readme,
+::meta(
   lang: en
-}
+)
 
-${macro.generated_by(self.path)}
+$macro.generated_by(self::path)
 
 =[ Vocabularies ]
 
@@ -22,7 +20,7 @@ A vocabulary is a `@vocabulary(name){ version: ... }` document that names the el
 ==[ Layout ]
 
 ```text
-vocabularies/<name>/<name>@<version>.vocabulary.tmt
+`` vocabularies/<name>/<name>@<version>.vocabulary.tmt
 ```
 
 -| `<name>` is the vocabulary's namespace, as `@vocabulary(<name>)` declares it.
@@ -46,9 +44,9 @@ A file that has been pushed is never edited, not even to fix a typo: a fix is a 
 Declare where the file comes from in the repository's `catasto.ctmt`, then run `catasto sync`:
 
 ```text
-"tmtroot/schema/vocabularies/writ@1.0.0.vocabulary.tmt": {
-  source: { git: "https://github.com/tomet-lang/vocabularies.git", rev: main, path: "vocabularies/writ/writ@1.0.0.vocabulary.tmt" }
-}
+`` "tmtroot/schema/vocabularies/writ@1.0.0.vocabulary.tmt": {
+``   source: { git: "https://github.com/tomet-lang/vocabularies.git", rev: main, path: "vocabularies/writ/writ@1.0.0.vocabulary.tmt" }
+`` }
 ```
 
 Pin `rev` to a tag or a commit once you depend on it.

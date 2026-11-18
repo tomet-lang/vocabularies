@@ -8,7 +8,8 @@
         "rev": "main",
         "path": "base/.editorconfig"
       },
-      "commit": "4d2293d73bc91a742ba57dad7cb4c652726af836"
+      "commit": "7a0a52ae2f5814dc6f75b3f54303d0031e9229dc",
+      "mode": "executable"
     },
     ".gitattributes": {
       "sha256": "2c4d2530e6c2f455de09b135a57ea1ec71790ccffaa4eadcdd4643ee466d76c3",
@@ -17,7 +18,7 @@
         "rev": "main",
         "path": "base/.gitattributes"
       },
-      "commit": "4d2293d73bc91a742ba57dad7cb4c652726af836"
+      "commit": "7a0a52ae2f5814dc6f75b3f54303d0031e9229dc"
     },
     "LICENSE-APACHE": {
       "sha256": "a549c19a5c34ad57b10e336bdfad9cb6040c2fc311ed217f01c7a9c4ddee6015",
@@ -26,7 +27,7 @@
         "rev": "main",
         "path": "base/LICENSE-APACHE"
       },
-      "commit": "4d2293d73bc91a742ba57dad7cb4c652726af836"
+      "commit": "7a0a52ae2f5814dc6f75b3f54303d0031e9229dc"
     },
     "LICENSE-MIT": {
       "sha256": "24d88f36f2620d2b18d70bc2136e103b1f9910a63a4614d94404577b2a41f5a0",
@@ -35,7 +36,16 @@
         "rev": "main",
         "path": "base/LICENSE-MIT"
       },
-      "commit": "4d2293d73bc91a742ba57dad7cb4c652726af836"
+      "commit": "7a0a52ae2f5814dc6f75b3f54303d0031e9229dc"
+    },
+    "tmtroot/schema/vocabularies/catasto@1.0.0.vocabulary.tmt": {
+      "sha256": "d251289090d83fdb9b96b958af75cea77f69793e5d844f8c6a3a8d6d8adf48f0",
+      "source": {
+        "git": "https://github.com/tomet-lang/fs-catasto.git",
+        "rev": "main",
+        "path": "tmtroot/schema/vocabularies/catasto@1.0.0.vocabulary.tmt"
+      },
+      "commit": "11c492d423dc69080a95177485592d7df570335c"
     }
   }
 }

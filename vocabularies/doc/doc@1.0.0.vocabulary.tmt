@@ -1,31 +1,27 @@
 ::kind(vocabulary)
-::vocabulary(doc){
-  version: "1.0.0"
-}
-
-::elements{
-  index: {
+::vocabulary(doc, version: "1.0.0")
+::element(
+  index: (
     display: block
     singleton: false
-    args: {
-      id: {
+    args: (
+      id: (
         type: string
         positional: true
         about: | The rule's identifier. The heading is prose and may be reworded; this
                | identifier is the name a tool is held to.
-      }
-    }
-  }
-  icon: {
+  )))
+  icon: (
     display: block
     singleton: false
-    args: {
-      id: {
-        type: string
-        positional: true
-        about: | The rule's identifier. The heading is prose and may be reworded; this
-               | identifier is the name a tool is held to.
-      }
-    }
-  }
-}
+    args: (
+      name: (type: string, positional: true)
+      pkg:  (type: string, positional: true)
+  ))
+  kbd: (
+    display: block
+    singleton: false
+    args: (
+      name: (type: string, positional: true)
+      pkg:  (type: string, positional: true)
+)))

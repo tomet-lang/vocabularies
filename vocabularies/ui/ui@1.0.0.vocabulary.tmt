@@ -1,19 +1,23 @@
 ::kind(vocabulary)
-::vocabulary(ui){
-  version: "1.0.0"
-}
-
-::elements{
-  details: {
+::vocabulary(ui, version: "1.0.0")
+::element(
+  details: (
     display: block
     singleton: false
-    args: {
-      id: {
+    args: (
+      id: (
         type: string
         positional: true
         about: | The rule's identifier. The heading is prose and may be reworded; this
                | identifier is the name a tool is held to.
-      }
-    }
-  }
-}
+  )))
+  tabs: (
+    display: block
+    singleton: false
+    args: (
+      id: (
+        type: string
+        positional: true
+        about: | The rule's identifier. The heading is prose and may be reworded; this
+               | identifier is the name a tool is held to.
+))))

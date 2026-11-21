@@ -1,5 +1,5 @@
 ::kind(vocabulary)
-::vocabulary(doc, version: "1.0.0")
+::vocabulary(doc, version: "0.1.0")
 ::element(
   index: (
     display: block
@@ -22,6 +22,5 @@
     display: block
     singleton: false
     args: (
-      name: (type: string, positional: true)
-      pkg:  (type: string, positional: true)
+      key: (type: string, positional: true)
 )))

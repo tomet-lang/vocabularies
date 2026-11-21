@@ -1,12 +1,12 @@
-::kind(catasto, version: "1.0.0")
+::kind(catasto, version: "0.1.0")
 ::upstream(
   commonfiles: catasto.git("https://github.com/tomet-lang/commonfiles.git", rev: main, root: base)
   fs_catasto:  catasto.git("https://github.com/tomet-lang/fs-catasto.git", rev: main, root: "tmtroot/schema")
 )
 
 // Schema
-"tmtroot/schema/catasto@1.0.0.vocabulary.tmt": catasto.upstream(fs_catasto, path: "catasto@1.0.0.vocabulary.tmt")
-"tmtroot/schema/catasto@1.0.0.blueprint.ctmt": catasto.upstream(fs_catasto, path: "catasto@1.0.0.blueprint.ctmt")
+"tmtroot/schema/catasto@0.1.0.vocabulary.tmt": catasto.upstream(fs_catasto, path: "catasto@0.1.0.vocabulary.tmt")
+"tmtroot/schema/catasto@0.1.0.blueprint.ctmt": catasto.upstream(fs_catasto, path: "catasto@0.1.0.blueprint.ctmt")
 
 // Environment
 ".editorconfig":  catasto.upstream(commonfiles, path: ".editorconfig")

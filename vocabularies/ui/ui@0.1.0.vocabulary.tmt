@@ -1,11 +1,11 @@
 ::kind(vocabulary)
-::vocabulary(ui, version: "1.0.0")
+::vocabulary(ui, version: "0.1.0")
 ::element(
   details: (
     display: block
     singleton: false
     args: (
-      id: (
+      content: (
         type: string
         positional: true
         about: | The rule's identifier. The heading is prose and may be reworded; this
@@ -15,9 +15,28 @@
     display: block
     singleton: false
     args: (
-      id: (
+      tabs: (
         type: string
         positional: true
         about: | The rule's identifier. The heading is prose and may be reworded; this
                | identifier is the name a tool is held to.
+  )))
+  tab: (
+    display: block
+    singleton: false
+    args: (
+      title: (
+        type: string
+        positional: true
+        about: | The rule's identifier. The heading is prose and may be reworded; this
+               | identifier is the name a tool is held to.
+  )))
+  group: (
+    display: block
+    singleton: false
+    about: | Gallery
+    args: (
+      id: (
+        type: string
+        positional: true
 ))))

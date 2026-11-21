@@ -1,0 +1,242 @@
+::kind(vocabulary)
+::vocabulary(std, version: "0.1.0")
+::attribute(
+  kind: (
+    singleton: true
+    about: | What kind of document this is, and the version of that kind's definition.
+    args: (
+      kind: (type: string, positional: true, required: true)
+      version: (type: version, positional: true)
+  ))
+  id: (
+    singleton: true
+    about: | The identity of this document, unique across the documents of a vault.
+    args: (
+      id: (type: string, positional: true, required: true)
+  ))
+  version: (
+    singleton: true
+    about: | The language version the document is written in.
+    args: (
+      version: (type: version, positional: true, required: true)
+  ))
+  profile: (
+    host: tmt
+    singleton: true
+    about: | The subsets of tomet the document promises to stay inside, as bare names in no
+           | particular order. A profile never changes what the document means.
+  )
+  meta: (
+    singleton: true
+    about: | Information about the document: its free attributes, as `name: value` entries.
+  )
+  format: (
+    host: tmt
+    about: | How documents are formatted: the rules `tomet format` and the printers follow.
+  )
+  field: (
+    host: tmt
+    about: | A `::meta` field this vault or folder declares: its type and shape.
+  )
+  workspace: (
+    host: tmt
+    about: | Which paths are part of the vault. Only the vault config may write it.
+  )
+  export: (
+    host: tmt
+    singleton: true
+    about: | Where and in which formats this document is exported.
+  )
+  blueprint: (
+    host: tmt
+    about: | `::blueprint(kind)` is the header of a blueprint document, written once.
+           | `::blueprint(name: @file(path))` registers a blueprint file in a vault or folder config.
+    args: (
+      target: (type: string, positional: true)
+  ))
+  vocabulary: (
+    host: tmt
+    about: | `::vocabulary(ns, version: "0.1.0")` is the header of a vocabulary document, written once.
+           | `::vocabulary(ns: @file(path))` registers a vocabulary file in a vault or folder config.
+    args: (
+      namespace: (type: string, positional: true)
+      version: (type: version)
+  ))
+  dictionary: (
+    host: tmt
+    about: | `::dictionary(name)` is the header of a dictionary document, written once.
+           | `::dictionary(name: @file(path))` registers a dictionary file in a vault or folder config.
+    args: (
+      name: (type: string, positional: true)
+  ))
+  migration: (
+    host: tmt
+    singleton: true
+    about: | The settings of the migration tool. `tomet` reads nothing from it.
+  )
+  macro: (
+    about: | A macro this document or vault defines.
+  )
+  var: (
+    about: | A variable this document or vault declares.
+  )
+  use: (
+    about: | Brings a vocabulary into scope, one per vocabulary.
+    args: (
+      target: (type: string, positional: true, required: true)
+      version: (type: version, positional: true)
+  ))
+  element: (
+    host: tmt
+    about: | The `@name` elements a vocabulary declares.
+  )
+  attribute: (
+    host: tmt
+    about: | The `::name` attributes a vocabulary declares: what a document says about itself in
+           | the vocabulary's terms.
+  )
+  constructor: (
+    host: tmt
+    about: | A constructor a vocabulary declares.
+))
+::element(
+  data: (
+    content: (allow: ())
+    about: | The description of an element's data slot.
+  )
+  draft: (
+    content: (allow: inline)
+    about: | There is no text here yet, and the element stands in place of it.
+  )
+  fixme: (
+    content: (allow: inline)
+    about: | There is text here and it needs revisiting.
+  )
+  conflict: (
+    content: (allow: ())
+    about: | Two divergent candidates from a 3-way merge that gave up reconciling them.
+           | `a` and `b` name structural slots, not perspective.
+    args: (
+      a: (positional: true)
+      b: (positional: true)
+  ))
+  file: (
+    content: (allow: inline)
+    about: | A path to a file, named and not navigated to. The path has to exist.
+    args: (
+      target: (type: string, positional: true, required: true)
+  ))
+  dir: (
+    content: (allow: inline)
+    about: | A path to a directory, named and not navigated to. The path has to exist.
+    args: (
+      target: (type: string, positional: true, required: true)
+  ))
+  link: (
+    content: (allow: inline)
+    about: | A link. What kind of target it is comes from the target's own scheme prefix.
+    args: (
+      target: (type: string, positional: true, required: true)
+  ))
+  embed: (
+    content: (allow: inline)
+    about: | Embeds the target in place.
+    args: (
+      target: (type: string, positional: true, required: true)
+  ))
+  hr: (
+    display: block
+    content: (allow: ())
+    about: | A thematic break.
+  )
+  em: (
+    display: inline
+    content: (allow: inline)
+    about: | Emphasis.
+  )
+  strong: (
+    display: inline
+    content: (allow: inline)
+    about: | Strong importance.
+  )
+  mark: (
+    display: inline
+    content: (allow: inline)
+    about: | Marked or highlighted text.
+  )
+  strikeout: (
+    display: inline
+    content: (allow: inline)
+    about: | Struck through: the words were withdrawn.
+  )
+  ruby: (
+    display: inline
+    content: (allow: inline)
+    about: | A reading annotation. The content is the base text, `rt` the reading.
+    args: (
+      rt: (type: string)
+  ))
+  raw: (
+    content: (allow: ())
+    about: | Code. Standing alone it is a code block, inside running text inline code.
+    args: (
+      lang: (type: string, positional: true)
+  ))
+  quote: (
+    content: (allow: any)
+    about: | A quotation. Standing alone it is a block quote, inside running text an inline one.
+  )
+  callout: (
+    display: block
+    content: (allow: any)
+    about: | An admonition: signals a category to the reader.
+    args: (
+      variant: (type: string, positional: true)
+      title: (type: string)
+  ))
+  card: (
+    display: block
+    content: (allow: any)
+    about: | A plain box with no admonition semantics.
+  )
+  table: (
+    display: block
+    content: (allow: any)
+    about: | A table.
+  )
+  heading: (
+    display: block
+    content: (allow: inline)
+    about: | A heading.
+    args: (
+      level: (type: uint, positional: true)
+  ))
+  ftn: (
+    content: (allow: any)
+    about: | A footnote: a definition when it has content, a reference to the one with the
+           | same id when it has none.
+    args: (
+      id: (type: string, positional: true)
+  ))
+  tag: (
+    content: (allow: ())
+    about: | Topic and category tags, as names.
+  )
+  task: (
+    content: (allow: any)
+    about: | An actionable task item.
+    args: (
+      status: (type: string, positional: true)
+  ))
+  term: (
+    content: (allow: any)
+    about: | A mention of a term a dictionary defines. In a `::dictionary` document, as a block
+           | of the body, it is the definition, and the content is its description.
+    args: (
+      target: (type: string, positional: true, required: true)
+  ))
+  comment: (
+    content: (allow: any)
+    about: | A note for whoever reads the exported source, written in the target's own
+           | comment syntax. Not the `//` and `/* */` an author writes in a `.tmt` file.
+))

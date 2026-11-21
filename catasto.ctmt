@@ -1,4 +1,4 @@
-::use(catasto, version: "1.0.0")
+::kind(catasto, version: "1.0.0")
 ::upstream(
   commonfiles: catasto.git("https://github.com/tomet-lang/commonfiles.git", rev: main, root: base)
   fs_catasto:  catasto.git("https://github.com/tomet-lang/fs-catasto.git", rev: main, root: tmtroot/schema/vocabularies)

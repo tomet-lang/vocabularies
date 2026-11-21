@@ -2,14 +2,13 @@
   "version": 1,
   "files": {
     ".editorconfig": {
-      "sha256": "2640a0cd478e15abaf9ecdabd962ac0937a3f7e1dc39900649d381f693803d94",
+      "sha256": "dd25aacb9e34b5819b0b0645843fd42f786ca0bb4f9089afa922f162e593179f",
       "source": {
         "git": "https://github.com/tomet-lang/commonfiles.git",
         "rev": "main",
         "path": "base/.editorconfig"
       },
-      "commit": "7a0a52ae2f5814dc6f75b3f54303d0031e9229dc",
-      "mode": "executable"
+      "commit": "f5917d73c8cc20837a93d826828a9df67471ba58"
     },
     ".gitattributes": {
       "sha256": "2c4d2530e6c2f455de09b135a57ea1ec71790ccffaa4eadcdd4643ee466d76c3",
@@ -18,7 +17,7 @@
         "rev": "main",
         "path": "base/.gitattributes"
       },
-      "commit": "7a0a52ae2f5814dc6f75b3f54303d0031e9229dc"
+      "commit": "f5917d73c8cc20837a93d826828a9df67471ba58"
     },
     "LICENSE-APACHE": {
       "sha256": "a549c19a5c34ad57b10e336bdfad9cb6040c2fc311ed217f01c7a9c4ddee6015",
@@ -27,7 +26,7 @@
         "rev": "main",
         "path": "base/LICENSE-APACHE"
       },
-      "commit": "7a0a52ae2f5814dc6f75b3f54303d0031e9229dc"
+      "commit": "f5917d73c8cc20837a93d826828a9df67471ba58"
     },
     "LICENSE-MIT": {
       "sha256": "24d88f36f2620d2b18d70bc2136e103b1f9910a63a4614d94404577b2a41f5a0",
@@ -36,16 +35,16 @@
         "rev": "main",
         "path": "base/LICENSE-MIT"
       },
-      "commit": "7a0a52ae2f5814dc6f75b3f54303d0031e9229dc"
+      "commit": "f5917d73c8cc20837a93d826828a9df67471ba58"
     },
     "tmtroot/schema/vocabularies/catasto@1.0.0.vocabulary.tmt": {
-      "sha256": "d251289090d83fdb9b96b958af75cea77f69793e5d844f8c6a3a8d6d8adf48f0",
+      "sha256": "3259c87a389a1bf6ab279c195ef330f6600bdb551c0a768f38a338b7d9787be5",
       "source": {
         "git": "https://github.com/tomet-lang/fs-catasto.git",
         "rev": "main",
         "path": "tmtroot/schema/vocabularies/catasto@1.0.0.vocabulary.tmt"
       },
-      "commit": "11c492d423dc69080a95177485592d7df570335c"
+      "commit": "1aeeb6d0cc2938efb06c7bc47ab09263c7d73035"
     }
   }
 }

@@ -4,10 +4,10 @@
   generated_by: @comment[ Generated from $(1). Edit that, then `tomet export .`. ]
 )
 ::vocabulary(
-  @file(tmtroot/schema/catasto@0.1.0.vocabulary.tmt)
+  @file(.tomet/schema/catasto@0.1.0.vocabulary.tmt)
 )
 ::blueprint(
-  catasto: @file(tmtroot/schema/catasto@0.1.0.blueprint.ctmt)
+  catasto: @file(.tomet/schema/catasto@0.1.0.blueprint.ctmt)
 )
 ::format(
   meta: (always_newline: true)
@@ -32,6 +32,6 @@
 ))
 ::workspace(
   ignore: (
-    "tmtroot/schema/catasto@0.1.0.vocabulary.tmt"
-    "tmtroot/schema/catasto@0.1.0.blueprint.ctmt"
+    ".tomet/schema/catasto@0.1.0.vocabulary.tmt"
+    ".tomet/schema/catasto@0.1.0.blueprint.ctmt"
 ))

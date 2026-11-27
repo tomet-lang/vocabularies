@@ -1,1 +1,4 @@
+::kind(vocabulary)
+::vocabulary(typst, version: "0.1.0")
+
 // canvas math

@@ -1,4 +1,4 @@
-<!-- Generated from tmtroot/readme.tmt. Edit that, then `tomet export .`. -->
+<!-- Generated from .tomet/readme.tmt. Edit that, then `tomet export .`. -->
 
 # Vocabularies
 
